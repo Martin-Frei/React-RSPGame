@@ -72,7 +72,7 @@ function RSPgame() {
         setPlayerChoice("");
         setComputerChoice("");
         setResult("");
-      }, 5000);
+      }, 3000);
     }, 600);
 
     return () => clearTimeout(timer);

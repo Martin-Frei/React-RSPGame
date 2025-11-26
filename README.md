@@ -1,70 +1,203 @@
-# Getting Started with Create React App
+# 🎮 Rock Paper Scissors Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, interactive Rock Paper Scissors game built with React. Play a best-of-5 match against the computer with real-time score tracking and smooth animations.
 
-## Available Scripts
+![Game Interface](screenshots/rpsGame.png)
 
-In the project directory, you can run:
+## 🚀 Live Demo
 
-### `npm start`
+**[Play the Game](https://martin-frei.github.io/React-RSPGame/)** 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ✨ Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 🎯 **Best of 5 System** - Complete matches with round tracking
+- 📊 **Live Score Tracking** - Real-time wins, losses, and draws counter
+- 🎨 **Modern UI** - Gradient background with smooth hover effects
+- 🎭 **Icon-Based Controls** - Intuitive hand gesture icons from React Icons
+- ⏱️ **Smart Timing** - Automatic round reset with visual feedback
+- 🔒 **Game State Management** - Buttons disabled after match completion
+- 🔄 **Quick Restart** - Reset game instantly with one click
+- 📱 **Responsive Design** - Works perfectly on all screen sizes
 
-### `npm test`
+## 🎯 How to Play
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Choose your move: Rock 🪨, Paper 📄, or Scissors ✂️
+2. Computer makes its choice automatically
+3. Winner is determined based on classic rules:
+   - Rock beats Scissors
+   - Paper beats Rock
+   - Scissors beats Paper
+4. First to win 3 rounds wins the match!
+5. Click "Restart Game" to play again
 
-### `npm run build`
+## 📸 Screenshots
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Main Game Interface
+![Game Start](screenshots/rpsGame.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### During Gameplay
+![First Round](screenshots/firstRound.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Round Result - Draw
+![Draw Result](screenshots/draw.png)
 
-### `npm run eject`
+### Match Victory
+![You Win](screenshots/youWin.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🛠️ Tech Stack
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **React 19** - Latest React version with Hooks
+- **React Icons** - Professional icon library (Font Awesome)
+- **Tailwind CSS** - Utility-first styling framework
+- **JavaScript ES6+** - Modern JavaScript features
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🎯 Key Concepts Demonstrated
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- ✅ **React Hooks** - useState, useEffect with complex state management
+- ✅ **Game Logic** - Winner calculation algorithm
+- ✅ **State Management** - Multiple coordinated state variables
+- ✅ **Conditional Rendering** - Dynamic UI based on game state
+- ✅ **Event Handling** - User input and game flow control
+- ✅ **Timing Control** - setTimeout for game pacing
+- ✅ **Component Architecture** - Clean, reusable component structure
+- ✅ **Responsive Design** - Mobile-first approach with Tailwind
 
-## Learn More
+## 🚀 Getting Started
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Prerequisites
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Node.js (v14 or higher)
+- npm or yarn
 
-### Code Splitting
+### Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Martin-Frei/React-RSPGame.git
+   cd React-RSPGame
+   ```
 
-### Analyzing the Bundle Size
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. **Start the development server**
+   ```bash
+   npm start
+   ```
 
-### Making a Progressive Web App
+4. **Open your browser**
+   ```
+   http://localhost:3000
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 📦 Project Structure
 
-### Advanced Configuration
+```
+React-RSPGame/
+├── public/
+│   └── index.html
+├── src/
+│   ├── App.js              # Main app component
+│   ├── RSPgame.jsx         # Game logic and UI
+│   ├── App.css
+│   └── index.js
+├── screenshots/            # Game screenshots
+├── package.json
+└── README.md
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🎮 Game Logic
 
-### Deployment
+### Round Determination
+```javascript
+if (playerChoice === computerChoice) {
+  // Draw
+} else if (
+  (playerChoice === "rock" && computerChoice === "scissor") ||
+  (playerChoice === "paper" && computerChoice === "rock") ||
+  (playerChoice === "scissor" && computerChoice === "paper")
+) {
+  // Player wins
+} else {
+  // Computer wins
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Match Flow
+1. User selects a choice (Rock/Paper/Scissors)
+2. Computer generates random choice after 600ms delay
+3. Winner is determined and score updated
+4. Round result displayed for 3 seconds
+5. Game resets for next round
+6. After 5 rounds, final match winner is declared
 
-### `npm run build` fails to minify
+## 🎨 Design Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Gradient Background** - Eye-catching gray-900 to black gradient
+- **Yellow Accent Color** - High-contrast yellow-300 for better visibility
+- **Hover Effects** - Interactive button states with smooth transitions
+- **Icon-Based UI** - Font Awesome hand gesture icons
+- **Centered Layout** - Clean, focused game interface
+- **Score Display** - Always visible win/lose/draw counters
+
+## 🌱 Future Enhancements
+
+- [ ] Add sound effects for moves and results
+- [ ] Implement difficulty levels (Easy/Medium/Hard)
+- [ ] Add multiplayer mode (local or online)
+- [ ] Store game history in localStorage
+- [ ] Add animations for hand gestures
+- [ ] Implement tournament mode
+- [ ] Add dark/light theme toggle
+- [ ] Create leaderboard system
+
+## 📚 What I Learned
+
+This project helped me practice:
+- Managing complex state with multiple useState hooks
+- Coordinating timing with useEffect and setTimeout
+- Implementing game logic and winner determination
+- Creating responsive layouts with Tailwind CSS
+- Using React Icons for better UI
+- Building interactive user experiences
+- Handling game flow and state transitions
+
+## 🤝 Contributing
+
+This is a portfolio project, but suggestions and feedback are welcome!
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 👨‍💻 Author
+
+**Martin Freimuth**
+- GitHub: [@Martin-Frei](https://github.com/Martin-Frei)
+- LinkedIn: [martin-freimuth](https://www.linkedin.com/in/martin-freimuth-089249359/)
+- Email: mat.frei@gmx.de
+
+## 🙏 Acknowledgments
+
+- [React](https://reactjs.org/) - The amazing JavaScript library
+- [React Icons](https://react-icons.github.io/react-icons/) - Beautiful icon library
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- Classic Rock Paper Scissors game for the inspiration
+
+---
+
+**⭐ If you enjoyed this game, please consider giving it a star!**
+
+*Built with ❤️ using React and Tailwind CSS*
+
+---
+
+## 🎯 Game Rules Reminder
+
+- 🪨 **Rock** beats Scissors
+- 📄 **Paper** beats Rock  
+- ✂️ **Scissors** beats Paper
+
+**Good luck and have fun!** 🎮
