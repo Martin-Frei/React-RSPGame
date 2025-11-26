@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/React-RSPGame/static/css/main.1205a499.css",
+    "main.js": "/React-RSPGame/static/js/main.55f6d9cf.js",
+    "static/js/453.abb33e2c.chunk.js": "/React-RSPGame/static/js/453.abb33e2c.chunk.js",
+    "index.html": "/React-RSPGame/index.html",
+    "main.1205a499.css.map": "/React-RSPGame/static/css/main.1205a499.css.map",
+    "main.55f6d9cf.js.map": "/React-RSPGame/static/js/main.55f6d9cf.js.map",
+    "453.abb33e2c.chunk.js.map": "/React-RSPGame/static/js/453.abb33e2c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1205a499.css",
+    "static/js/main.55f6d9cf.js"
+  ]
+}
