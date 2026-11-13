@@ -1,5 +1,11 @@
 # 🎮 Rock Paper Scissors Game
 
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwindcss&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
+[![Live Demo](https://img.shields.io/badge/demo-live-success)](https://martin-frei.github.io/React-RSPGame/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 A modern, interactive Rock Paper Scissors game built with React. Play a best-of-5 match against the computer with real-time score tracking and smooth animations.
 
 ![Game Interface](screenshots/rpsGame.png)
